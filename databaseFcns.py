@@ -23,7 +23,7 @@ def populateDatabase(databaseName, wordCounts, metaData):
     for file in wordCounts:
         for word in file:
             c.execute(''' INSERT INTO State-of-the-Union-WordCount (filename, Word, Count)''')
-    #c.execute(''' CREATE TABLE US-Presidents-Info (idx, number, start, end, president, prior, party, vice)''')
+    c.execute(''' CREATE TABLE US-Presidents-Info (idx, number, start, end, president, prior, party, vice)''')
 
     conn.commit()
     conn.close()
@@ -44,19 +44,19 @@ def populateDatabase(databaseName, wordCounts, metaData):
 # Part 2
 ####################################################
 
-#def searchDatabase(databaseName, word): 
+def searchDatabase(databaseName, word): 
     # Write a function that will query the database to find the 
     # president whose speech had the largest count of a specified word.
     # Inputs: A database file to search and a word to search for
     # Outputs: The name of the president whose speech contained 
     #          the highest count of the target word
-    #return 0
+    return 0
 
-#def computeLengthByParty(databaseName): 
+def computeLengthByParty(databaseName): 
     # Write a function that will query the database to find the 
     # average length (number of words) of a speech by presidents
     # of the two major political parties.
     # Inputs: A database file to search and a word to search for
     # Outputs: The average speech length for presidents of each 
     #          of the two major political parties.
-    #return 0
+    return 0
